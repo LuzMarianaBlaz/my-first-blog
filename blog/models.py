@@ -2,7 +2,7 @@ from django.db import models		#las lineas from e import se usan para añadir cos
 from django.utils import timezone 
 
 
-#esta linea define nuestro modelo, este es un objeto, esto esta definido por la palabra "class", el nombre de nuestro modelo es Post, notar que la primera letra es mayuscula, esto debe hacerse siempre al definir un objeto, models.Model significa que Post es un modelo de Django
+'''esta linea define nuestro modelo, este es un objeto, esto esta definido por la palabra "class", el nombre de nuestro modelo es Post, notar que la primera letra es mayuscula, esto debe hacerse siempre al definir un objeto, models.Model significa que Post es un modelo de Django'''
 class Post(models.Model): 		
 #estas cosas son propiedades, y para cada una hay que definir un tipo de campo	
 	author=models.ForeignKey('auth.User') #foreignKey es un vinculo con otro modelo
@@ -13,7 +13,7 @@ class Post(models.Model):
 	published_date=models.DateTimeField(
 		blank=True,null=True)
 
-	#ahora definiremos un metodo, llamado publish, para los nombres de metodos se deben usar minusculas y ningun espacio
+	'''ahora definiremos un metodo, llamado publish, para los nombres de metodos se deben usar minusculas y ningun espacio'''
 	def publish(self):
 		self.published_date=timezone.now()
 		self.save()
