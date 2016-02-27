@@ -18,5 +18,5 @@ class Post(models.Model):
 		self.published_date=timezone.now()
 		self.save()
 
-	def _str_(self):				#los guiones son dunders
+	def __str__(self):				#los guiones son dunders
 		return self.title			#cuando usemos este metodo nos devolvera el titulo de Post
