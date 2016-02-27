@@ -1,7 +1,6 @@
 *.pyc
 __pycache__
 myenv
-db.sqlite3  #este archivo es la base de datos local, donde se guardan los posts, en ese lugar se pueden hacer experimentos sin poner en riesgo el "blog 
-#global"
+db.sqlite3
 /static
 .DS_Store
